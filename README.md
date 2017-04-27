@@ -1,0 +1,2 @@
+# koperasi
+Sistem koperasi sederhana
