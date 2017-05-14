@@ -14,3 +14,18 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+
+Route::resource('nasabah','NasabahController');
+
+
+
+// Datatable
+Route::group(['prefix' => 'datatable'], function () {
+	Route::get('/nasabah','DatatableController@nasabah');
+
+});
