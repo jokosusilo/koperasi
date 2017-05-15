@@ -21,6 +21,7 @@ Route::get('/home', 'HomeController@index');
 
 
 Route::resource('nasabah','NasabahController');
+Route::resource('dokumen','DokumenController');
 
 
 
