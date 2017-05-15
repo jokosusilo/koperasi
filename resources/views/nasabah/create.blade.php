@@ -13,39 +13,33 @@
         {{ csrf_field() }}
 
         <div class="form-group">
-            <label class="col-sm-2 control-label" for="name">Nama Barang *</label>
-            <div class="col-sm-8">
-                <input type="text" name="name" id="name" class="form-control form-roll" placeholder="" value="{{ old('name') }}" required="" />
+            <label class="col-sm-2 control-label" for="kode">Kode ID Pengenal</label>
+            <div class="col-sm-6">
+                <input type="text" name="kode" id="kode" class="form-control form-roll" value="{{ old('kode') }}" required />
             </div>
         </div>
         <div class="form-group">
-            <label class="col-sm-2 control-label" for="color">Warna Barang *</label>
-            <div class="col-sm-8">
-                <input type="text" name="color" id="color" class="form-control form-roll" placeholder="" value="{{ old('color') }}" required="" />
+            <label class="col-sm-2 control-label" for="nama">Nama</label>
+            <div class="col-sm-6">
+                <input type="text" name="nama" id="nama" class="form-control form-roll" value="{{ old('nama') }}" required />
             </div>
         </div>
         <div class="form-group">
-            <label class="col-sm-2 control-label" for="unit">Satuan *</label>
-            <div class="col-sm-8">
-                <input type="text" name="unit" id="unit" class="form-control form-roll" placeholder="" value="{{ old('unit') }}" required="" />
+            <label class="col-sm-2 control-label" for="alamat">Alamat</label>
+            <div class="col-sm-6">
+                <textarea  name="alamat" id="alamat" class="form-control form-roll" required>{{ old('alamat') }}</textarea>
             </div>
         </div>
         <div class="form-group">
-            <label class="col-sm-2 control-label" for="quantity">Jumlah *</label>
-            <div class="col-sm-8">
-                 <input type="number" min="0" name="quantity" id="quantity" class="form-control form-roll numbersOnly" placeholder="" value="{{ old('quantity') }}" required="" />
+            <label class="col-sm-2 control-label" for="telepon">Telepon</label>
+            <div class="col-sm-6">
+                <input type="text" name="telepon" id="telepon" class="form-control form-roll numbersOnly" placeholder="" value="{{ old('telepon') }}" required/>
             </div>
         </div>
         <div class="form-group">
-            <label class="col-sm-2 control-label" for="cost_price">Harga Beli *</label>
-            <div class="col-sm-8">
+            <label class="col-sm-2 control-label" for="cost_price">Keanggotaan</label>
+            <div class="col-sm-6">
                 <input type="number" min="0" name="cost_price" id="cost_price" class="form-control form-roll numbersOnly" placeholder="" value="{{ old('cost_price') }}" required=""  required="" />
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-sm-2 control-label" for="selling_price">Harga Jual *</label>
-            <div class="col-sm-8">
-                <input type="number" min="0" name="selling_price" id="selling_price" class="form-control form-roll numbersOnly" placeholder="" value="{{ old('selling_price') }}" required="" />
             </div>
         </div>
         <div class="form-group">

@@ -34,7 +34,7 @@
       </a>
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
-          <li class="dropdown messages-menu">
+{{--           <li class="dropdown messages-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-envelope-o"></i>
               <span class="label label-success">4</span>
@@ -109,7 +109,7 @@
                 <a href="#">View all tasks</a>
               </li>
             </ul>
-          </li>
+          </li> --}}
 
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -157,7 +157,7 @@
       <ul class="sidebar-menu">
         <li class="header">NAVIGASI</li>
         <li class="">
-          <a href="#">
+          <a href="{{ url('/home') }}">
             <i class="fa fa-home"></i> <span>Dashboard</span>
           </a>
         </li>
@@ -178,7 +178,17 @@
             <i class="fa fa-users"></i> <span>Nasabah</span>
           </a>
         </li>
-        <li class="treeview">
+        <li>
+          <a href="{{ route('nasabah.index') }}">
+            <i class="fa fa-money"></i> <span>Simpanan</span>
+          </a>
+        </li>
+        <li>
+          <a href="{{ route('nasabah.index') }}">
+            <i class="fa fa-hand-shake"></i> <span>Pinjaman</span>
+          </a>
+        </li>
+{{--         <li class="treeview">
           <a href="#">
             <i class="fa fa-link"></i> <span>Multilevel</span>
               <span class="pull-right-container">
@@ -189,6 +199,12 @@
             <li><a href="#">Link in level 2</a></li>
             <li><a href="#">Link in level 2</a></li>
           </ul>
+        </li> --}}
+        <li class="header">SETTING</li>
+        <li class="">
+          <a href="{{ url('/keanggotaan') }}">
+            <i class="fa fa-home"></i> <span>Keanggotaan</span>
+          </a>
         </li>
       </ul>
     </section>
