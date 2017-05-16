@@ -20,7 +20,7 @@ class CreateKeanggotaansTable extends Migration
             $table->integer('simpanan_wajib');
             $table->integer('bunga_simpanan');
             $table->integer('denda_simpanan');
-            $table->text('keterangan');
+            $table->text('keterangan')->nullable();
             $table->timestamps();
         });
     }

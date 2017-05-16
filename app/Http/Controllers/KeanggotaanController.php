@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Keanggotaan;
 
 class KeanggotaanController extends Controller
 {
@@ -13,7 +14,7 @@ class KeanggotaanController extends Controller
      */
     public function index()
     {
-        return view('keanggotaan.index');
+        return view('keanggotaan.index', ['keanggotaans' => Keanggotaan::all()]);
     }
 
     /**
@@ -34,7 +35,17 @@ class KeanggotaanController extends Controller
      */
     public function store(Request $request)
     {
-        print_r($request->all());
+        $this->validate($request, [
+            'jenis'             => 'required',
+            'simpanan_pokok'    => 'required',
+            'simpanan_wajib'    => 'required',
+            'bunga_simpanan'    => 'required',
+            'denda_simpanan'    => 'required',
+        ]);
+
+        Keanggotaan::create($request->all());
+
+        return redirect()->route('keanggotaan.index');
     }
 
     /**
@@ -79,6 +90,7 @@ class KeanggotaanController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Keanggotaan::destroy($id);
+        return redirect()->route('keanggotaan.index'); 
     }
 }

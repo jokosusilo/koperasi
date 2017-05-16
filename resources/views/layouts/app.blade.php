@@ -185,12 +185,17 @@
         </li>
         <li>
           <a href="{{ route('nasabah.index') }}">
-            <i class="fa fa-hand-shake"></i> <span>Pinjaman</span>
+            <i class="fa fa-suitcase"></i> <span>Deposito</span>
           </a>
         </li>
-{{--         <li class="treeview">
+        <li>
+          <a href="{{ route('nasabah.index') }}">
+            <i class="fa fa-handshake-o"></i> <span>Pinjaman</span>
+          </a>
+        </li>
+        <li class="treeview">
           <a href="#">
-            <i class="fa fa-link"></i> <span>Multilevel</span>
+            <i class="fa fa-newspaper-o"></i> <span>Laporan</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
@@ -199,11 +204,16 @@
             <li><a href="#">Link in level 2</a></li>
             <li><a href="#">Link in level 2</a></li>
           </ul>
-        </li> --}}
+        </li>
         <li class="header">SETTING</li>
         <li class="">
           <a href="{{ url('/keanggotaan') }}">
             <i class="fa fa-home"></i> <span>Keanggotaan</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="{{ url('/keanggotaan') }}">
+            <i class="fa fa-user"></i> <span>Admin</span>
           </a>
         </li>
       </ul>

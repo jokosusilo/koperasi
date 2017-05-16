@@ -28,5 +28,6 @@ Route::resource('keanggotaan','KeanggotaanController');
 // Datatable
 Route::group(['prefix' => 'datatable'], function () {
 	Route::get('/nasabah','DatatableController@nasabah');
+	Route::get('/keanggotaan','DatatableController@keanggotaan');
 
 });
